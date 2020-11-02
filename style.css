@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
 body {
-    background-color:hsl(0, 0%, 98%);
+    background-color:hsl(0, 0%, 93%);
     height: 80vh;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
@@ -10,8 +10,8 @@ body {
 header {
     display: inline-block;
     text-align: center;
-    margin-left: 40vh;
-    margin-right: 40vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
 }
 
 h1, h5 {
@@ -27,13 +27,17 @@ h2 {
 
 h3 {
     font-weight: 600;
-    color: #454757;
+    color: hsl(234, 12%, 34%);
 }
 
 p {
     font-weight: 400;
     color: hsl(229, 6%, 66%);
 }
+
+h3, p {
+    padding: 1vh;
+} 
 
 header, section {
     display: grid;
@@ -42,54 +46,65 @@ header, section {
     margin-top: 10vh;
     margin-bottom: 10vh;
 }
-
+.item {
+    background-color: white;
+}
 .grid-container {
-    display: flex;
+    
+    display: grid;
     text-align: center;
     align-items: center;
-    grid-template-columns: repeat(7, auto);
-    gap: 8px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+    gap: 25px;
 }
 
-#first-box {
+#first-box {  /*supervisor*/
     width: 40vh;
     height: 30vh;
-    padding: 2vh;
+    padding: 3vh;
     display: inline-block;
     text-align: left;
     box-shadow: 0 0 10px 1px #747474;
     border-radius: 6px;
     border-top: 6px solid hsl(180, 62%, 55%);
-
+    grid-column: 1 / span 1;
+    grid-row: 3;
 }
 #second-box {
     width: 40vh;
     height: 30vh;
-    padding: 2vh;
+    padding: 3vh;
     display: inline-block;
     text-align: left;
     box-shadow: 0 0 10px 1px #747474;
     border-radius: 6px;
     border-top: 6px solid hsl(0, 78%, 62%) ;
+    grid-column: 2 / span 4;
+    grid-row: 2;
 }
 #third-box {
     width: 40vh;
     height: 30vh;
     display: inline-block;
-    padding: 2vh;
+    padding: 3vh;
     text-align: left;
     box-shadow: 0 0 10px 1px #747474;
     border-radius: 6px;
     border-top: 6px solid hsl(34, 97%, 64%);
+    grid-column: 2 / span 2;
+    grid-row: 3;
 }
 #fourth-box {
     width: 40vh;
     height: 30vh;
-    padding: 2vh;
+    padding: 3vh;
     display: inline-block;
     text-align: left;
     box-shadow: 0 0 10px 1px #747474;
     border-radius: 6px;
     border-top: 6px solid hsl(212, 86%, 64%);
+    grid-column: 3 / span 6;
+    grid-row: 2;
 }
 
